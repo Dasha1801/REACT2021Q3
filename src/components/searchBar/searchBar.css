@@ -9,7 +9,7 @@
   border-radius: 20px;
   display: flex;
   justify-content: flex-end;
-  border: 4px solid rgba(15, 81, 119, 0.725);
+  border: 4px solid teal;
 }
 
 .container input {
@@ -18,7 +18,7 @@
   outline: none;
   padding: 10px 0;
   font-size: 2em;
-  color: rgba(15, 81, 119, 0.725);
+  color: teal;
   border-radius: 20px;
   margin-right: 1%;
 }
