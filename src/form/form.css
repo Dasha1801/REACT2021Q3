@@ -1,0 +1,26 @@
+.formStyle {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  padding: 20px;
+  margin: 20px auto;
+  border: 3px solid rgb(20, 233, 222);
+  align-items: center;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: inherit;
+  margin-bottom: 10px;
+}
+.btn {
+  background-color: rgb(20, 233, 222);
+  color: rgb(4, 4, 49);
+  border: none;
+  font-weight: 600;
+  margin-top: 20px;
+  padding: 6px 70px;
+  font-size: 14px;
+}
