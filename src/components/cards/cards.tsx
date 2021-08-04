@@ -3,13 +3,13 @@ import './cards.css';
 import { allCards} from '../../shared/cardInfo';
 import {Card} from '../card/card';
 
-const renderCards = [];
+const renderCards: Array<JSX.Element>= [];
 
 allCards.forEach(info => {
   renderCards.push(Card(info));
 });
 
-export function Cards(){
+export function Cards():JSX.Element{
   return (
     <div className={'wrapperCards'}>
       {renderCards}

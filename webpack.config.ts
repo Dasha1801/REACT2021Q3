@@ -43,7 +43,7 @@ const config = (develop: boolean): webpack.Configuration => ({
         type: 'asset/resource',
       },
 
-      {
+      { 
         test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
         type: 'asset/resource',
       },

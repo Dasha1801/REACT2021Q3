@@ -1,10 +1,11 @@
 import React from 'react';
 import './card.css';
+import {CardInfo} from '../../shared/cardInfo';
 
 
-export function Card(info) {
+export function Card(info:CardInfo): JSX.Element{
   return (
-    <div className={'card'}>
+    <div className={'card'} key={info.id}>
       <div className={'card__image a'}>
         <img src={info.img}/>
       </div>
@@ -16,6 +17,5 @@ export function Card(info) {
     </div>
   );
 }
-
 
 
