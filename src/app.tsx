@@ -2,11 +2,11 @@ import React, {useState} from 'react';
 import {Form} from './form/form';
 import {Card} from './card/card';
 import './app.css';
+import { formPropType } from './shared/formPropType';
 
 
-
-export const App= ():JSX.Element =>{
-  const [formValues,setFormValues] = useState([]);
+export const App = ():JSX.Element =>{
+  const [formValues,setFormValues] = useState<formPropType[]>([]);
 
   return(
     <div className='app'>

@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-label {
+.label {
   display: flex;
   flex-direction: column;
   color: white;
@@ -16,11 +16,8 @@ label {
   margin-bottom: 5px;
   font-size: 18px;
 }
-p{
+.labelName{
   margin: 10px 0;
-}
-input {
-  line-height: 18px;
 }
 .btn {
   background-color: rgb(20, 233, 222);
@@ -35,10 +32,15 @@ input {
   flex-direction: revert;
   align-items: baseline;
 }
-span{
+.warning{
   font-size: 14px;
   color: red;
 }
 .checkBox p{
   font-size: 14px;
+}
+
+.gender{
+  flex-direction: row;
+  justify-content: space-evenly;
 }
