@@ -13,7 +13,14 @@ label {
   flex-direction: column;
   color: white;
   width: inherit;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+p{
+  margin: 10px 0;
+}
+input {
+  line-height: 18px;
 }
 .btn {
   background-color: rgb(20, 233, 222);
@@ -22,5 +29,16 @@ label {
   font-weight: 600;
   margin-top: 20px;
   padding: 6px 70px;
+  font-size: 14px;
+}
+.checkBox {
+  flex-direction: revert;
+  align-items: baseline;
+}
+span{
+  font-size: 14px;
+  color: red;
+}
+.checkBox p{
   font-size: 14px;
 }

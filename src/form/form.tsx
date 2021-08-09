@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './form.css';
 
-export const Form = ({setFormValues}) : JSX.Element=> {
+export const Form = ({setFormValues}): JSX.Element => {
 
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -36,7 +36,7 @@ export const Form = ({setFormValues}) : JSX.Element=> {
   const handlerSubmit = (event:React.SyntheticEvent) => {
     event.preventDefault();
     if(Object.keys(errors).length === 0){
-      setFormValues((state:any) => [...state, {firstName, lastName, birthDate, country, agree}]);
+      setFormValues((state) => [...state, {firstName, lastName, birthDate, country, agree}]);
       reset();
     }
   }
@@ -82,9 +82,9 @@ export const Form = ({setFormValues}) : JSX.Element=> {
           <option>USA</option>
         </select>
       </label >
-      <label htmlFor='agree'>
-        <p>This box I agree...{errors?.agree !== undefined && <span>* agree should be check</span>}</p>
-          <input type='checkbox' name='agree' checked={agree} onChange={() => setAgree(prev => !prev)}/>
+      <label htmlFor='agree' className='checkBox'>
+      <input type='checkbox' name='agree' checked={agree} onChange={() => setAgree(prev => !prev)}/>
+        <p>Use of this website constitutes acceptance of the Terms of Use and Privacy Policy. {errors?.agree !== undefined && <span>* agree should be check</span>}</p>
       </label>
       <div>
         <input type='submit' value='Send' className='btn'/>
