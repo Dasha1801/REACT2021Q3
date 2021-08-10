@@ -16,7 +16,7 @@
   margin-bottom: 5px;
   font-size: 18px;
 }
-.labelName{
+.labelName {
   margin: 10px 0;
 }
 .btn {
@@ -32,15 +32,21 @@
   flex-direction: revert;
   align-items: baseline;
 }
-.warning{
+.warning {
   font-size: 14px;
   color: red;
 }
-.checkBox p{
+.labelCheckbox {
   font-size: 14px;
 }
 
-.gender{
+.wrapper {
+  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+
+.labelGender{
+  font-size: 14px;
+  margin: 0;
 }
