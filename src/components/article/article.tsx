@@ -1,36 +1,17 @@
-import React, {FC, useState} from 'react';
+import React, {FC} from 'react';
 import { ArticleInfo } from '../../shared/articleInfo';
 import './article.css';
 
-type SortType = 'asc' | 'desc' | 'unsorted';
 
 export const Article:FC<{articles:ArticleInfo[]}> = ({articles}) => {
-  const [sortBy, setSortBy] = useState<SortType>('unsorted');
 
-  const handleSort = () => {
-    switch(sortBy){
-      case 'asc':
-        setSortBy('desc');
-        break;
-      case 'desc':
-        setSortBy('unsorted');
-        break;
-      case 'unsorted':
-        setSortBy('asc');
-        break;
-      default:
-        break;
-    }
-  }
- 
   return (
     <div className='wrapper'>
-      <table>
+     {articles.length ? <table>
         <tr>
         <td>Title</td>
         <td>Author</td>
         <td>Published At
-          <button type='button' onClick={handleSort}>{sortBy}</button>
         </td>
         <td>Description</td>
         <td>Content</td>
@@ -50,7 +31,7 @@ export const Article:FC<{articles:ArticleInfo[]}> = ({articles}) => {
             </tr>
         })}
 
-      </table>
+      </table> : null}
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import React, {ChangeEvent, useState} from 'react';
 import axiosInstance from '../../services/api';
 import { ArticleInfo } from '../../shared/articleInfo';
+import { SortType } from '../../shared/sortType';
 import { Article } from '../article/article';
 import './search.css';
 
@@ -11,11 +12,14 @@ export function Search():JSX.Element{
   const[searchValue, setSearchValue] = useState('');
   const[isLoading, setIsLoading] = useState(false);
   const[articles, setArticles] = useState<ArticleInfo[]>([]);
+  const[sortBy, setSortBy] = useState<SortType>(SortType.popularity);
+
+
   const handleSubmit = async (e:ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
     try{
-      const res = await axiosInstance.get(`v2/everything?q=${searchValue}&apiKey=${API_KEY}`);
+      const res = await axiosInstance.get(`v2/everything?q=${searchValue}&apiKey=${API_KEY}&sortBy=${sortBy}`);
       setArticles(res.data.articles);
     }
     catch(Error){
@@ -42,6 +46,19 @@ export function Search():JSX.Element{
         </label>
       </form>
     </div>
+    
+      <label>
+      relevancy 
+        <input type='radio' value={SortType.relevancy} checked={sortBy === SortType.relevancy} onChange={()=> setSortBy(SortType.relevancy)}></input>
+      </label>
+      <label>
+      popularity 
+        <input type='radio' value={SortType.popularity} checked={sortBy === SortType.popularity} onChange={()=> setSortBy(SortType.popularity)}></input>
+      </label>
+      <label>
+      published at 
+        <input type='radio' value={SortType.publishedAt} checked={sortBy === SortType.publishedAt} onChange={()=> setSortBy(SortType.publishedAt)}></input>
+      </label>
      <Article articles={articles}/>
     </>
    
