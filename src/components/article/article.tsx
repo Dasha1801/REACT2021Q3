@@ -1,37 +1,71 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import { ArticleInfo } from '../../shared/articleInfo';
 import './article.css';
 
 
-export const Article:FC<{articles:ArticleInfo[]}> = ({articles}) => {
+interface ArticleProps {
+  articles: ArticleInfo[];
+  page: number;
+  onChangePage: (numberPage: number) => void;
+}
+
+export const Article:FC<ArticleProps> = ({articles, page, onChangePage}) => {
+
+const[artPage, setArtPage] = useState<number | string>('');
+
+useEffect(() => {
+  setArtPage(page);
+}, [page]);
+
+const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
+  const { value } = e.target;
+  const regexp = /\d+/;
+  const matchedValue = value.match(regexp);
+  if (matchedValue) {
+    const newValue = +matchedValue[0];
+    onChangePage(newValue);
+    setArtPage(newValue);
+  } else {
+    setArtPage('');
+  }
+};
 
   return (
     <div className='wrapper'>
-     {articles.length ? <table>
-        <tr>
-        <td>Title</td>
-        <td>Author</td>
-        <td>Published At
-        </td>
-        <td>Description</td>
-        <td>Content</td>
-        <td>Image</td>
-        </tr>
+     {articles.length ? (
+      <div className='wrapper-table'>
+        <table className='table'>
+          <thead>
+            <tr>
+              <th className='cell'>Title</th>
+              <th className='cell'>Author</th>
+              <th className='cell'>Published At
+              </th>
+              <th className='cell'>Description</th>
+              <th className='cell'>Content</th>
+              <th className='cell'>Image</th>
+            </tr>
+          </thead>
+          <tbody>
         {articles.map(({title, author,publishedAt, content, description, urlToImage}, index) => {
-          return <tr key={index}>
+          return (<tr key={index}>
             
-            <td>{title}</td>
-            <td>{author}</td>
-            <td>{publishedAt}</td>
-            <td>{description}</td>
-            <td>{content}</td>
-            <td>
+            <td className='cell'>{title}</td>
+            <td className='cell'>{author}</td>
+            <td className='cell'>{publishedAt}</td>
+            <td className='cell'>{description}</td>
+            <td className='cell'>{content}</td>
+            <td className='cell'>
             <img src={urlToImage} width={200}></img>
             </td>
             </tr>
+        );
         })}
-
-      </table> : null}
+        </tbody>
+     </table>
+          <input className='numberPage' type='text' value={artPage} onChange={handleChange} />
+        </div>
+      ) : null}
     </div>
   )
 }
