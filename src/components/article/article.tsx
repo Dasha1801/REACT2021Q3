@@ -1,4 +1,4 @@
-import React, {FC, useEffect, useState} from 'react';
+import React, {FC, useEffect, useState, ChangeEvent} from 'react';
 import { ArticleInfo } from '../../shared/articleInfo';
 import './article.css';
 
@@ -12,6 +12,7 @@ interface ArticleProps {
 export const Article:FC<ArticleProps> = ({articles, page, onChangePage}) => {
 
 const[artPage, setArtPage] = useState<number | string>('');
+
 
 useEffect(() => {
   setArtPage(page);
@@ -29,6 +30,8 @@ const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
     setArtPage('');
   }
 };
+
+
 
   return (
     <div className='wrapper'>
@@ -56,7 +59,7 @@ const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
             <td className='cell'>{description}</td>
             <td className='cell'>{content}</td>
             <td className='cell'>
-            <img src={urlToImage} width={200}></img>
+            <img src={urlToImage} className='image'></img>
             </td>
             </tr>
         );

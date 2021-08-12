@@ -14,3 +14,7 @@
   padding: 3px 0;
   font-size: 16px;
 }
+
+.image{
+  max-width: 200px;
+}
