@@ -5,7 +5,7 @@ import './searchBar.css';
 export function SearchBar():JSX.Element{
   return (
     <div className={'container'}>
-      <input type='text' />
+      <input className='input' type='text' />
     </div>
   );
 }

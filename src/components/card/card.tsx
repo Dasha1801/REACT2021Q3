@@ -7,7 +7,7 @@ export function Card(info:CardInfo): JSX.Element{
   return (
     <div className={'card'} key={info.id}>
       <div className={'card__image a'}>
-        <img src={info.img}/>
+        <img className='image' src={info.img}/>
       </div>
       <div className={'card__content'}>
         <div className={'card__title'}>{info.title}</div>

@@ -1,4 +1,4 @@
-img{
+.image{
   object-fit:cover;
   height:100%;
   max-width:100%;
@@ -14,8 +14,7 @@ img{
     0 5px 4px 1px rgba(0, 0, 0, 0.15), 
     0 7px 10px -3px rgba(0, 0, 0,0.17), 
     0 10px 13px -4px rgba(0, 0, 0, 0.23), 
-    0 16px 20px -4px rgba(0, 0, 0, 0.36);
-  /* overflow:hidden; */
+    0 16px 20px -4px rgba(0, 0, 0, 0.36)
 } 
 
 .card__image{
