@@ -5,7 +5,7 @@ import { SortType } from '../../shared/sortType';
 import { Article } from '../article/article';
 import './search.css';
 
-const API_KEY = '6acc09f802644746b9fafbaeda30a3d6';
+const API_KEY = 'dce1ecff0d944119bd054b7f18902c8e';
 
 export function Search():JSX.Element{
 
@@ -25,11 +25,13 @@ export function Search():JSX.Element{
       const res = await axiosInstance.get(`v2/everything?q=${searchValue}&apiKey=${API_KEY}&sortBy=${sortBy
       }&pageSize=${amount}&page=${page}`);
       setArticles(res.data.articles);
-      setAllPage(Math.floor(res.data.totalResults/amount));
-      setIsLoading(false);
+      setAllPage(Math.ceil(res.data.totalResults/amount));
     }
     catch(Error){
       console.error(Error);
+    }
+    finally{
+      setIsLoading(false);
     }
     
   }
