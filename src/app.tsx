@@ -8,16 +8,16 @@ import {
 } from 'react-router-dom';
 import About from './components/about/about';
 import NotFound from './components/notFound/notFound';
-// import './app.css';
+import './app.css';
 
 
 const App = () => {
   return (
     <HashRouter>
-      <nav>
-        <ul>
-          <li><NavLink exact to='/'>Home</NavLink></li>
-          <li><NavLink to='/about'>About</NavLink></li>
+      <nav className='header'>
+        <ul className='listNav'>
+          <li><NavLink exact to='/' className='link'>Home</NavLink></li>
+          <li><NavLink to='/about' className='link'>About</NavLink></li>
         </ul>
       </nav>
       <div className='content'>

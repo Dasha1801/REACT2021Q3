@@ -1,0 +1,25 @@
+.header{
+  background-color: teal;
+  height: 70px;
+  font-size: 18px;
+}
+
+.listNav{
+  margin-top: 0;
+  list-style: none;
+  display: flex;
+  width: 180px;
+  justify-content: space-between;
+  align-items: center;
+  height: inherit;
+}
+
+.active{
+  border-bottom: 2px solid white;
+}
+
+.link{
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
