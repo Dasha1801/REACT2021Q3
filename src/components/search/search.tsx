@@ -47,7 +47,7 @@ export function Search():JSX.Element{
 
   return (
  <>
-    <div className={'container'}>
+    <div className='container'>
       <form className='searchForm' onSubmit={handleSubmit}>
         
         <button className='btnSearch' type='submit' disabled={isLoading}></button>

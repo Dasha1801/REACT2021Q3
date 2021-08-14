@@ -6,27 +6,48 @@ import {
   HashRouter,
   Switch
 } from 'react-router-dom';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import About from './components/about/about';
 import NotFound from './components/notFound/notFound';
 import './app.css';
 
 
 const App = () => {
+
+  const routes = [
+    {path : '/' , Component : Search},
+    {path : '/about' , Component : About},
+    {path : '*' , Component : NotFound},
+  ];
+
   return (
     <HashRouter>
       <nav className='header'>
         <ul className='listNav'>
           <li><NavLink exact to='/' className='link'>Home</NavLink></li>
           <li><NavLink to='/about' className='link'>About</NavLink></li>
-        </ul>
-      </nav>
-      <div className='content'>
+       </ul>
+    </nav>
+      <TransitionGroup>
         <Switch>
-          <Route exact path='/' component={Search}/>
-          <Route path='/about' component={About}/>
-          <Route path='/*' component={NotFound}/>
-        </Switch>
-      </div>
+        {routes.map(({ path, Component }) => (
+            <Route key={path} exact path={path}>
+              {({ match }) => (
+                <CSSTransition
+                  in={match != null}
+                  timeout={300}
+                  classNames="page"
+                  unmountOnExit
+                >
+                  <div className="page">
+                    <Component />
+                  </div>
+                </CSSTransition>
+              )}
+            </Route>
+          ))}
+      </Switch>
+      </TransitionGroup>
     </HashRouter>
   )
 }
