@@ -1,6 +1,10 @@
 import React, {FC, useEffect, useState, ChangeEvent} from 'react';
+import { Link } from 'react-router-dom';
 import { ArticleInfo } from '../../shared/articleInfo';
+import { ArticleItem } from '../articleItem/articleItem';
 import './article.css';
+
+
 
 
 interface ArticleProps {
@@ -30,42 +34,20 @@ const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
     setArtPage('');
   }
 };
-
-
-
   return (
     <div className='wrapper'>
      {articles.length ? (
-      <div className='wrapper-table'>
-        <table className='table'>
-          <thead>
-            <tr>
-              <th className='cell'>Title</th>
-              <th className='cell'>Author</th>
-              <th className='cell'>Published At
-              </th>
-              <th className='cell'>Description</th>
-              <th className='cell'>Content</th>
-              <th className='cell'>Image</th>
-            </tr>
-          </thead>
-          <tbody>
-        {articles.map(({title, author,publishedAt, content, description, urlToImage}, index) => {
-          return (<tr key={index}>
-            
-            <td className='cell'>{title}</td>
-            <td className='cell'>{author}</td>
-            <td className='cell'>{publishedAt}</td>
-            <td className='cell'>{description}</td>
-            <td className='cell'>{content}</td>
-            <td className='cell'>
-            <img src={urlToImage} className='image'></img>
-            </td>
-            </tr>
+      <div className='wrapper-article'>
+        {articles.map((info, index) => {
+          const pathItem = '/details/' + info.title.replace(/ /g,"+");
+          
+          
+          return (
+            <Link key={index} className='article-item' to={pathItem}>
+              <ArticleItem info={info}/>
+            </Link>
         );
         })}
-        </tbody>
-     </table>
           <input className='numberPage' type='text' value={artPage} onChange={handleChange} />
         </div>
       ) : null}

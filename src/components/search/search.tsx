@@ -5,7 +5,7 @@ import { SortType } from '../../shared/sortType';
 import { Article } from '../article/article';
 import './search.css';
 
-const API_KEY = 'dce1ecff0d944119bd054b7f18902c8e';
+export const API_KEY = 'dce1ecff0d944119bd054b7f18902c8e';
 
 export function Search():JSX.Element{
 

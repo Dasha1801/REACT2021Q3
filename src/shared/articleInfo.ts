@@ -1,4 +1,4 @@
-export interface ArticleInfo{
+export type ArticleInfo = {
   author: string
   content: string
   description: string

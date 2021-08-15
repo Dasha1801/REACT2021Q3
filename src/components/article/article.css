@@ -1,9 +1,12 @@
-.wrapper-table{
+.wrapper-article{
   width: 90%;
   margin: 15px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
-.cell, .numberPage {
+.numberPage {
   border: 1px solid grey;
 }
 
@@ -15,6 +18,7 @@
   font-size: 16px;
 }
 
-.image{
-  max-width: 200px;
+.article-item{
+  text-decoration: none;
+  color: black;
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Search } from './components/search/search';
 import {
   Route,
@@ -10,13 +10,15 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import About from './components/about/about';
 import NotFound from './components/notFound/notFound';
 import './app.css';
+import { DetailPage } from './components/detailPage/detailPage';
 
 
 const App = () => {
-
+  
   const routes = [
     {path : '/' , Component : Search},
     {path : '/about' , Component : About},
+    {path : '/details/*' , Component : DetailPage},
     {path : '*' , Component : NotFound},
   ];
 
@@ -40,7 +42,7 @@ const App = () => {
                   unmountOnExit
                 >
                   <div className="page">
-                    <Component />
+                    <Component/>
                   </div>
                 </CSSTransition>
               )}
