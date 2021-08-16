@@ -7,9 +7,7 @@ interface InfoItem{
 }
 
 export const ArticleItem:React.FC<InfoItem>= ({info}, index) => {
- 
 
-  
   return(
     <div className='container-item' key={index}>
       <div>
@@ -17,7 +15,6 @@ export const ArticleItem:React.FC<InfoItem>= ({info}, index) => {
           <h5 className='titleH5'>Author: {info.author}</h5>
           <h5 className='titleH5'>{info.publishedAt}</h5>
           <p className='text'><span className='titleText'>Description:</span> {info.description}</p>
-          <p className='text'>{info.content}</p>
       </div>
       <div> <img src={info.urlToImage} className='image'></img></div>
     </div>

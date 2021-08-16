@@ -4,9 +4,6 @@ import { ArticleInfo } from '../../shared/articleInfo';
 import { ArticleItem } from '../articleItem/articleItem';
 import './article.css';
 
-
-
-
 interface ArticleProps {
   articles: ArticleInfo[];
   page: number;
@@ -16,7 +13,6 @@ interface ArticleProps {
 export const Article:FC<ArticleProps> = ({articles, page, onChangePage}) => {
 
 const[artPage, setArtPage] = useState<number | string>('');
-
 
 useEffect(() => {
   setArtPage(page);
@@ -39,9 +35,7 @@ const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
      {articles.length ? (
       <div className='wrapper-article'>
         {articles.map((info, index) => {
-          const pathItem = '/details/' + info.title.replace(/ /g,"+");
-          
-          
+          const pathItem = '/details/' + info.title.replace(/[\ \/]/g,'+');
           return (
             <Link key={index} className='article-item' to={pathItem}>
               <ArticleItem info={info}/>

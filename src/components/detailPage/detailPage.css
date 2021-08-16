@@ -1,0 +1,12 @@
+.detail-item{
+  margin: 20px auto;
+  width: 70%;
+  border: none;
+}
+
+.detail-item .image{
+  display: block;
+  padding-top: 10px;
+  min-width: 50%;
+  margin: 0 auto;
+}

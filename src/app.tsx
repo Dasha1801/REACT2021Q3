@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Search } from './components/search/search';
 import {
   Route,
@@ -14,7 +14,6 @@ import { DetailPage } from './components/detailPage/detailPage';
 
 
 const App = () => {
-  
   const routes = [
     {path : '/' , Component : Search},
     {path : '/about' , Component : About},

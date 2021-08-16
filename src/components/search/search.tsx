@@ -49,7 +49,6 @@ export function Search():JSX.Element{
  <>
     <div className='container'>
       <form className='searchForm' onSubmit={handleSubmit}>
-        
         <button className='btnSearch' type='submit' disabled={isLoading}></button>
         <label htmlFor='search' className='search'>
         <input type='text' className='entryField' value={searchValue} onChange={handleChange} />
@@ -82,6 +81,5 @@ export function Search():JSX.Element{
     </div>
      <Article articles={articles} page={page} onChangePage={(numberPage:number) => setPage(numberPage)}/>
     </>
-   
   );
 }

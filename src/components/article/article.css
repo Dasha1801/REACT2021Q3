@@ -1,9 +1,6 @@
 .wrapper-article{
   width: 90%;
   margin: 15px auto 0;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
 }
 
 .numberPage {
