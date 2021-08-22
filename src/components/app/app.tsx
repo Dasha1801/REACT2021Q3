@@ -1,4 +1,5 @@
 import React from 'react';
+import { Home } from '../home/home';
 import {
   Route,
   NavLink,
@@ -10,7 +11,6 @@ import About from '../about/about';
 import NotFound from '../notFound/notFound';
 import './app.css';
 import { DetailPage } from '../detailPage/detailPage';
-import { Home } from '../home/home';
 
 
 const App = ():JSX.Element => {
