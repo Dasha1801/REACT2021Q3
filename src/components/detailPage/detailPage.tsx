@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import axiosInstance from '../../services/api';
 import { ArticleInfo } from '../../shared/articleInfo';
-import { API_KEY } from '../search/search';
+import { API_KEY } from '../../services/api';
 import './detailPage.css';
 
 

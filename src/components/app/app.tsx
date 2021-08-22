@@ -1,5 +1,4 @@
 import React from 'react';
-import { Search } from '../search/search';
 import {
   Route,
   NavLink,
@@ -11,11 +10,12 @@ import About from '../about/about';
 import NotFound from '../notFound/notFound';
 import './app.css';
 import { DetailPage } from '../detailPage/detailPage';
+import { Home } from '../home/home';
 
 
 const App = ():JSX.Element => {
   const routes = [
-    {path : '/' , Component : Search},
+    {path : '/' , Component : Home},
     {path : '/about' , Component : About},
     {path : '/details/*' , Component : DetailPage},
     {path : '*' , Component : NotFound},
