@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search } from './components/search/search';
+import { Search } from '../search/search';
 import {
   Route,
   NavLink,
@@ -7,10 +7,10 @@ import {
   Switch
 } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import About from './components/about/about';
-import NotFound from './components/notFound/notFound';
+import About from '../about/about';
+import NotFound from '../notFound/notFound';
 import './app.css';
-import { DetailPage } from './components/detailPage/detailPage';
+import { DetailPage } from '../detailPage/detailPage';
 
 
 const App = ():JSX.Element => {
