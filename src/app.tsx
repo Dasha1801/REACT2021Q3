@@ -13,7 +13,7 @@ import './app.css';
 import { DetailPage } from './components/detailPage/detailPage';
 
 
-const App = () => {
+const App = ():JSX.Element => {
   const routes = [
     {path : '/' , Component : Search},
     {path : '/about' , Component : About},
@@ -53,4 +53,4 @@ const App = () => {
   )
 }
 
-export default App();
+export default App;
