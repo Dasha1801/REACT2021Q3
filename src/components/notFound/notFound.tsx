@@ -3,7 +3,7 @@ import './notFound.css';
 
 const NotFound = (): JSX.Element => {
   return (
-    <div className='notFound'>
+    <div className='notFound' data-testid='text-pageNotFound'>
     <h3 className='titleH3'>Not found</h3>
     <h1 className='titleH1'>404</h1>
     </div>
