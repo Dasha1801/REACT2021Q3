@@ -46,9 +46,9 @@ export const Search:React.FC = ():JSX.Element => {
   return(
     <div className='container'>
     <form className='searchForm' onSubmit={formHandler}>
-      <button className='btnSearch' type='submit' disabled={isLoadingParams}></button>
+      <button className='btnSearch' type='submit' disabled={isLoadingParams} data-testid='btn'></button>
       <label htmlFor='search' className='search'>
-      <input type='text' className='entryField' value={searchParams.searchValue} onChange={handleSubmit} />
+      <input type='text' className='entryField' value={searchParams.searchValue} onChange={handleSubmit} data-testid='input'/>
       </label>
     </form>
   </div>
