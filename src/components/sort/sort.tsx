@@ -6,7 +6,7 @@ import { ISearch } from '../../shared/searchInfo';
 import { SortType } from '../../shared/sortType';
 import './sort.css';
 
-export const Sort:React.FC = ():JSX.Element => {
+const Sort:React.FC = ():JSX.Element => {
   const dispatch = useDispatch();
   const searchParams = useSelector<IStore, ISearch>(state => state.search);
   const allPage = useSelector<IStore, number>(state => state.totalResults);
@@ -18,10 +18,10 @@ export const Sort:React.FC = ():JSX.Element => {
     <div className='wrapper-sort'>
     <label>
     Number of items on page: 
-      <select className='' name='country' value={searchParams.amount} onChange={handleAmount}>
+      <select className='' name='country' value={searchParams.amount} onChange={handleAmount} data-testid='countItem'>
         <option>5</option>
-        <option>8</option>
-        <option>10</option>
+        <option data-testid='count8'>8</option>
+        <option data-testid='count10'>10</option>
       </select>
     </label>
     <label className='sort'>
@@ -41,3 +41,6 @@ export const Sort:React.FC = ():JSX.Element => {
   </div>
   )
 }
+
+
+export default Sort;

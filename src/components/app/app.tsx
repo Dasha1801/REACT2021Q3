@@ -25,8 +25,8 @@ const App = ():JSX.Element => {
     <HashRouter>
       <nav className='header'>
         <ul className='listNav'>
-          <li><NavLink exact to='/' className='link'>Home</NavLink></li>
-          <li><NavLink to='/about' className='link'>About</NavLink></li>
+          <li><NavLink exact to='/' className='link' >Home</NavLink></li>
+          <li><NavLink to='/about' className='link' >About</NavLink></li>
        </ul>
     </nav>
       <TransitionGroup>
@@ -54,3 +54,4 @@ const App = ():JSX.Element => {
 }
 
 export default App;
+
