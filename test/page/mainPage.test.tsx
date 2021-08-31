@@ -11,3 +11,4 @@ it('Link text on Main page', () => {
   expect(elLinkHome.textContent).toBe('Home');
   expect(elLinkAbout.textContent).toBe('About');
  });
+

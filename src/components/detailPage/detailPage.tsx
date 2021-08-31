@@ -23,7 +23,7 @@ export const DetailPage:React.FC= () => {
 
   return(
     <div className='detail-item'>
-      <h4 className='titleH4'>{detailInfo.title}</h4>
+      <h4 className='titleH4' data-testid='title'>{detailInfo.title}</h4>
       <img src={detailInfo.urlToImage} className='image'></img>
       <h5 className='titleH5'>Author: {detailInfo.author}</h5>
       <h5 className='titleH5'>{detailInfo.publishedAt}</h5>
