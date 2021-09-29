@@ -1,0 +1,64 @@
+.header {
+  background-color: teal;
+  height: 70px;
+  font-size: 18px;
+}
+
+.listNav {
+  margin-top: 0;
+  list-style: none;
+  display: flex;
+  width: 180px;
+  justify-content: space-between;
+  align-items: center;
+  height: inherit;
+}
+
+.active {
+  border-bottom: 2px solid white;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.link:hover {
+  font-size: 20px;
+}
+
+.page {
+  position: absolute;
+  width: 100%;
+}
+
+.page-enter-active {
+  animation: fade-in 1s forwards;
+}
+
+.page-exit-active {
+  animation: fade-out 1s forwards;
+}
+
+@keyframes fade-in {
+  0%{
+      opacity: 0;
+      transform: translateX(-100%);
+  }
+  100%{
+      opacity: 1;
+      transform: translateX(100%);
+  }
+}
+@keyframes fade-out {
+  0%{
+      opacity: 1;
+      transform: translateX(100%);
+  }
+  100%{
+      opacity: 0;
+      transform: translateX(-100%);
+  }
+}
+

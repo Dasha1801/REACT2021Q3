@@ -1,0 +1,21 @@
+.wrapper-article{
+  width: 90%;
+  margin: 15px auto 0;
+}
+
+.numberPage {
+  border: 1px solid grey;
+}
+
+.numberPage{
+  margin: 5px auto 0;
+  display: block;
+  text-align: center;
+  padding: 3px 0;
+  font-size: 16px;
+}
+
+.article-item{
+  text-decoration: none;
+  color: black;
+}
