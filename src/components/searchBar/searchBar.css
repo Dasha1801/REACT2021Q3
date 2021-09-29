@@ -1,0 +1,54 @@
+.container {
+  width: 45%;
+  margin: 20px auto;
+  background-image: url(../../assets/search.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 10%;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-end;
+  border: 4px solid teal;
+}
+
+.container .input {
+  width: 89%;
+  border: none;
+  outline: none;
+  padding: 10px 0;
+  font-size: 2em;
+  color: teal;
+  border-radius: 20px;
+  margin-right: 1%;
+}
+
+@media (max-width: 920px) {
+  .container {
+    background-size: 15%;
+    width: 65%;
+  }
+  .container .input {
+    width: 85%;
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 675px) {
+  .container {
+    height: 45px;
+  }
+  .container input {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 460px) {
+  .container {
+    height: 45px;
+    width: 85%;
+  }
+  .container .input {
+    font-size: 1.2em;
+  }
+}

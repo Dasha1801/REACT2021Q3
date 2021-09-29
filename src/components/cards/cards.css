@@ -1,0 +1,15 @@
+.wrapperCards{
+  display:flex;
+  margin:auto;
+  justify-content:center;
+  gap:2em;
+  padding: 2em;
+  width:clamp(300px, 50vw, 700px);
+  } 
+
+
+  @media (max-width: 985px){
+    .wrapperCards{
+      flex-direction:column;
+    }
+  }
