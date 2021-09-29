@@ -1,0 +1,8 @@
+import React from "react";
+import './about.css';
+
+const About = ():JSX.Element => {
+  return <div className='textAbout'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ullam labore minus eligendi veniam error laborum iste. Ullam eaque enim impedit, laboriosam quas adipisci odit est hic ipsa at, qui veniam, provident commodi eos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ullam labore minus eligendi veniam error laborum iste. Ullam eaque enim impedit, laboriosam quas adipisci odit est hic ipsa at, qui veniam, provident commodi eos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ullam labore minus eligendi veniam error laborum iste. Ullam eaque enim impedit, laboriosam quas adipisci odit est hic ipsa at, qui veniam, provident commodi eos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ullam labore minus eligendi veniam error laborum iste. Ullam eaque enim impedit, laboriosam quas adipisci odit est hic ipsa at, qui veniam, provident commodi eos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ullam labore minus eligendi veniam error laborum iste. Ullam eaque enim impedit, laboriosam quas adipisci odit est hic ipsa at, qui veniam, provident commodi eos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ullam labore minus eligendi veniam error laborum iste. Ullam eaque enim impedit, laboriosam quas adipisci odit est hic ipsa at, qui veniam, provident commodi eos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ullam labore minus eligendi veniam error laborum iste. Ullam eaque enim impedit, laboriosam quas adipisci odit est hic ipsa at, qui veniam, provident commodi eos!</div>
+}
+
+export default About;

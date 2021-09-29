@@ -1,0 +1,11 @@
+.textAbout{
+  width: 85%;
+  margin: 20px auto;
+  color: white;
+  background-color: rgba(21, 131, 131, 0.856);
+  padding: 10px;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 22px;
+  word-spacing: 3px;
+}

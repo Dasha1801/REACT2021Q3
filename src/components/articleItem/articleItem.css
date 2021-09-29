@@ -1,0 +1,33 @@
+.container-item {
+  width: inherit;
+  border: 2px solid black;
+  margin-bottom: 3px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.image {
+  max-width: 200px;
+}
+.titleH4, .titleH5, .text{
+  padding: 0;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.titleH4{
+  font-size: 18px;
+}
+
+.titleH5{
+  font-size: 16px;
+}
+
+.text{
+  font-size: 14px;
+}
+.titleText{
+  font-weight: 600;
+}
